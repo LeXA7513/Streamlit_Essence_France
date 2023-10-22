@@ -1,0 +1,9 @@
+python = 1.10.5
+pandas
+numpy
+streamlit
+datetime
+pydeck
+webbrowser
+seaborn
+matplotlib
