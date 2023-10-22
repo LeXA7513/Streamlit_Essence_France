@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from datetime import datetime, timedelta
-import seaborn as sns
 import matplotlib.pyplot as plt
 import pydeck as pdk
 import webbrowser
+import seaborn as sns
 
 def text_to_html_list(text):
     segments = text.split("//")
@@ -120,7 +120,7 @@ def main(data, date_la_plus_recente, Ville, Dep, Region,Essence_liste):
     st.sidebar.write("")
     st.sidebar.write("Fait par Axel AUTOGUE, le 23/10/2023")
     st.sidebar.write("LinkedIn : www.linkedin.com/in/axel-autogue-5511971a2")
-    st.sidebar.write("GitHub : www.linkedin.com/in/axel-autogue-5511971a2")
+    st.sidebar.write("GitHub : https://github.com/LeXA7513")
 
 
     selected_reg = st.selectbox("Sélectionnez une Région :", Region,on_change=reset)
