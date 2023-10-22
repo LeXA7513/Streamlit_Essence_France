@@ -243,7 +243,9 @@ def main(data, date_la_plus_recente, Ville, Dep, Region,Essence_liste):
 
     prices_by_region = data_filtre.groupby([selected_type, 'Essence'])['prix_valeur'].agg(['min', 'mean', 'max','count']).unstack()
     prices_by_region.columns = [f'{col[1]}_{col[0]}' for col in prices_by_region.columns]
-    prices_by_region.iloc[:, :-1] = prices_by_region.iloc[:, :-1].applymap(format_value)
+    for col in prices_by_region.columns:
+        if col != 'count':
+            prices_by_region[col] = prices_by_region[col].map(format_value)
 
     st.dataframe(prices_by_region.style.highlight_min(axis=0))
 
