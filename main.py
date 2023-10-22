@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from datetime import datetime, timedelta
-import matplotlib.pyplot as plt
+
 import pydeck as pdk
 import webbrowser
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 def text_to_html_list(text):
     segments = text.split("//")
